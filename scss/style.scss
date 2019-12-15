@@ -1,0 +1,695 @@
+@import "_include-media";
+
+* {
+    box-sizing: border-box;
+}
+
+@mixin header-wrap {
+    width: 976px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+
+
+    .logo-img {
+        width: auto;
+        font-size: 42px;
+        text-align: center;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            padding-top: 14px;
+            padding-left: 11px;
+        }
+    }
+
+    .logo {
+        text-align: center;
+        font-size: 64px;
+        color: #ffffff;
+
+    }
+
+    @include header-wrap-ul;
+
+}
+
+.slicknav_menu {
+    display: none;
+}
+
+@mixin header-wrap-ul {
+
+    & ul {
+        padding-top: 41px;
+        display: flex;
+
+        li:last-child {
+            margin-right: 21px;
+        }
+
+        & li {
+            margin-right: 44px;
+            padding-bottom: 17px;
+            border-bottom: 3px solid transparent;
+
+            &:hover {
+                padding-bottom: 17px;
+                border-bottom: 3px solid #5094f2;
+                transition: 0.3s;
+            }
+
+            & a {
+                text-decoration: none;
+                font-size: 20.35px;
+                line-height: auto;
+                color: #6c6c6c;
+                font-weight: 600;
+            }
+        }
+
+        & .active {
+            border-bottom: 3px solid #5094f2;
+        }
+    }
+}
+
+@mixin sliders {
+    & {
+        width: 100%;
+        height: auto;
+
+        & .main-slider {
+            width: 100%;
+            background: url(../../images/slider-background.png);
+            background-size: cover;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+
+            .teeth {
+                position: absolute;
+                width: 100%;
+                background: url('../../images/bg-triangles.png') repeat-x;
+                height: 8px;
+                z-index: 10;
+                bottom: 0;
+            }
+        }
+
+        .slider {
+            width: 100%;
+            position: relative;
+            height: 483px;
+        }
+
+        .item {
+            width: 100vw;
+            height: auto;
+            height: 483px;
+
+            .iphone-main {
+                margin-top: 2px;
+                margin-left: 27px;
+            }
+        }
+
+        .item-content {
+            width: 960px;
+            margin: 35px auto;
+            display: flex;
+
+        }
+    }
+
+    .slide-block_info {
+        margin-left: 105px;
+        margin-top: 104px;
+        color: #ffffff;
+
+        .p-one {
+            font-size: 42.35px;
+            line-height: 58.42px;
+        }
+
+        .p-two {
+            font-size: 26.35px;
+            line-height: 44.42px;
+        }
+
+        .p-three {
+            font-size: 26.35px;
+            line-height: 44.42px;
+            padding-bottom: 28px;
+        }
+
+        a {
+            margin-left: 13px;
+            padding-top: 8px;
+            display: flex;
+            width: 172px;
+            height: 41px;
+            font-size: 22.35px;
+            color: #ffffff;
+            padding-left: 11px;
+            border-radius: 3px;
+            background: #5094f2;
+            text-decoration: none;
+
+            img {
+                margin-left: 0px;
+                padding-top: 1px;
+                margin-right: 11px;
+                width: 23px;
+                height: 23px;
+            }
+        }
+    }
+
+    .item .description {
+        position: absolute;
+        color: #fff;
+        z-index: 10;
+        bottom: -99em;
+        transition: all .6s;
+        width: 100%;
+        min-height: 100px;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-shadow: 0px -100px 75px -75px rgba(0, 0, 0, 0.7) inset;
+        text-align: right;
+    }
+
+    .item .description a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .item:hover .description {
+        bottom: 0;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        display: none;
+    }
+
+    .slick-prev,
+    .slick-next {
+        width: 50px;
+        height: 77px;
+        z-index: 5;
+    }
+
+    .slick-prev,
+    .slick-prev:hover,
+    .slick-prev:focus {
+        top: 270px;
+        left: 138px;
+        background: url('../../images/arrow-left.png') no-repeat;
+    }
+
+    .slick-next,
+    .slick-next:hover,
+    .slick-next:focus {
+        top: 270px;
+        right: 118px;
+        background: url('../../images/arrow-right.png') no-repeat;
+    }
+
+    .iphone-mobile {
+        display: none;
+    }
+
+    .iphone-main {
+        display: inline-block;
+    }
+}
+
+// блок флекс 
+@mixin flex-info {
+    .Contrary {
+        padding-top: 65px;
+        padding-bottom: 93px;
+        width: 976px;
+        margin: 0 auto;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 278px;
+            height: auto;
+
+            img {
+                padding-bottom: 20px;
+            }
+
+            p {
+                font-weight: 600;
+                font-size: 20.35px;
+                color: #5094f2;
+
+                span {
+                    font-size: 14.35px;
+                    color: #909090;
+                }
+            }
+        }
+    }
+}
+
+@mixin shops {
+    & .shopping-cart {
+        width: 976px;
+        margin: 0 auto;
+        height: auto;
+        display: flex;
+        padding-bottom: 50px;
+
+        & .container1 h1 {
+            font-size: 42.35px;
+            padding-bottom: 36px;
+            color: #6f7173;
+            font-weight: 700;
+        }
+
+        & .container2 {
+            margin-top: 60px;
+            margin-left: 90px;
+
+            & h2 {
+                font-size: 26.35px;
+                color: #6f7173;
+                padding-bottom: 25px;
+                font-weight: 600;
+            }
+
+            & p {
+                font-size: 15.35px;
+                line-height: 36px;
+                color: #909090;
+            }
+        }
+    }
+}
+
+body {
+    font-family: SegoeWP;
+
+}
+
+.header-wrap {
+    @include header-wrap;
+}
+
+main {
+    @include sliders;
+    @include flex-info;
+    @include shops;
+
+}
+
+footer {
+    width: 100%;
+    height: 93px;
+    display: flex;
+    justify-content: center;
+    padding-top: 21px;
+    border-top: 1px solid #e5e5e5;
+    font-size: 15.35px;
+    line-height: 36px;
+    color: #909090;
+
+    p {
+        padding-right: 90px;
+    }
+}
+
+@include media('<desktop') {
+    .header-wrap {
+        width: 100%;
+    }
+
+    .slick-next {
+        padding-right: 180px;
+    }
+
+    main .Contrary {
+        div {
+            display: block;
+            width: 100%;
+
+            img {
+                float: left;
+            }
+
+            p {
+                margin-top: 50px;
+                display: inline-block;
+                margin-left: 20px;
+            }
+
+            .second-text {
+                margin-top: 0px;
+            }
+        }
+    }
+
+    main .Contrary,
+    main .shopping-cart {
+        height: auto;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .Contrary {
+        div {
+            height: auto;
+            width: 100%;
+            border-bottom: 1px solid #cccccc;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .right-block {
+            text-align: right;
+            display: inline-block;
+
+            p.second-text {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@include media('<=tablet') {
+
+    main .shopping-cart .container2 {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        h2 {
+            font-size: 34.35px;
+        }
+    }
+
+    .iphone-main {
+        display: none;
+    }
+
+    main .slider {
+        height: 250px;
+    }
+
+    main .item {
+        height: 250px;
+
+        img.iphone-main {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: auto;
+        }
+
+        .item-content {
+            height: 250px;
+            margin: 0;
+        }
+    }
+
+    .iphone-mobile {
+        display: inline-block;
+    }
+
+    .teeth {
+        display: none;
+    }
+
+    main .slide-block_info a {
+        width: 235px !important;
+        height: 53px !important;
+        font-size: 31.08px !important;
+
+        img {
+            width: 32px !important;
+            height: 32px !important;
+            padding: 0;
+        }
+    }
+
+    .logo-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .container1 {
+        padding-top: 50px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        & img {
+            width: 212px;
+            height: 153px;
+        }
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .slicknav_menu {
+        display: block;
+        background: #ffffff;
+
+        & a {
+            font-size: 20px;
+        }
+
+        & ul {
+            float: right;
+
+            & li {
+                width: 100%;
+
+                & a {
+                    font-size: 35px;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .slicknav_nav a {
+        color: #465a64;
+    }
+
+    .slicknav_nav a:hover {
+        background: #5094f2;
+    }
+
+    .slicknav_btn {
+        background-color: #5094f2;
+        width: 58px;
+        height: 44px;
+        text-align: center;
+        padding: 7px 15px 0 3px;
+    }
+
+    .slicknav_menu .slicknav_menutxt {
+        display: none;
+        float: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .slicknav_icon .slicknav_icon-bar {
+        margin: 0;
+        padding: 0;
+        width: 35px;
+        height: 5px;
+    }
+
+    .header-wrap {
+        padding-top: 0;
+    }
+
+    .item {
+        position: relative;
+        width: 100vw;
+        height: 250px;
+        display: flex;
+
+        & img {
+            width: 150px;
+            height: 250px;
+            margin-left: 250px;
+            padding-top: 50px;
+        }
+    }
+    main .item .item-content{      
+      width: 600px;
+      margin: 0 auto;
+    }
+    main .slide-block_info {
+      margin-top: 0;
+      margin-left: 50px;
+        p {
+          margin-left: 13px;
+        }
+        .p-one {
+          font-size: 30.98px;
+        }
+        .p-two {
+          font-size: 22.71px;
+        }
+        .p-three {
+          font-size: 22.71px;
+        }
+        a {           
+            img {
+                margin-left: 11px;
+                margin-right: 11px;
+                width: 23px;
+                height: 23px;
+            }
+        }
+    }
+    
+    main .Contrary {
+        padding-top: 0;  
+        padding-bottom: 0; 
+        br{
+          display: none;
+        }        
+        .first-text{
+          margin-top: 35px;
+          font-size: 34.14px;
+        } 
+        .second-text span{
+          font-size: 19.35px;
+        }
+        img {
+            margin-top: 20px;
+            margin-left: 10px;
+            width: 120px;
+            height: 140px;
+        }
+        div{
+          position: relative;
+          
+        }
+        div .first-text {
+          
+        }
+        div .second-text {
+            position: absolute;
+            width: 370px;
+            top: 75px;
+            left: 132px;
+        }
+    }
+    main .shopping-cart{      
+      .container1{        
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }      
+    }
+    footer{
+      display: flex;justify-content: center;
+      margin: 0;      
+      padding-top: 25px;
+      height: 84px;
+      p{
+        padding-right: 0;
+      }
+    }
+}
+@include media('<=360px') {        
+    img.iphone-main{        
+        width: 80px;
+        height: 180px;
+      }
+    main .slide-block_info {    
+      margin-top: 30px;
+      margin-left: 10px;              
+        .p-one {
+          font-size: 20.98px;
+          line-height: 20px;
+          margin-left: 0;
+        }
+        .p-two {
+          font-size: 12.71px;
+          line-height: 20px;
+          margin-left: 0;
+        }
+        .p-three {
+          font-size: 12.71px;
+          line-height: 20px;
+          margin-left: 0;
+        }
+        a {  
+            margin-left: 0;
+            padding-top: 2px;
+            width: 165px !important;  
+            height: 30px !important;            
+            font-size: 22px !important;
+            img {
+                margin-top: 3px;
+                margin-left: 0px;
+                margin-right: 5px;
+                width: 20px !important;
+                height: 20px !important;
+            }
+        }
+    }
+     main .Contrary {
+        padding-top: 0;  
+        padding-bottom: 0;         
+        br{
+          display: none;
+        }
+        .first-text{
+          margin-top: 35px;
+          font-size: 22.14px;
+        } 
+        .second-text span{
+          font-size: 12.35px;
+        }
+        img {
+            margin-top: 20px;
+            margin-left: 10px;
+            width: 120px;
+            height: 140px;
+        }
+        div{
+          position: relative;
+        }
+        div .second-text {
+            position: absolute;
+            width: 180px;
+            top: 60px;
+            left: 132px;
+        }
+    }
+  .main-slider{
+    .item{
+      margin-top: 30px;
+      .iphone-main{
+        margin-left: 5px;
+      }
+    }
+  }
+}
