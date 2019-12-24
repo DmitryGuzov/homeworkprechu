@@ -258,6 +258,10 @@
                 font-weight: 600;
                 font-size: 20.35px;
                 color: #5094f2;
+                a{
+                    color: #5094f2;
+                    text-decoration: none;
+                }
 
                 span {
                     font-size: 14.35px;
@@ -332,6 +336,10 @@ footer {
 
     p {
         padding-right: 90px;
+        a{
+            text-decoration: none;
+            color: #909090;
+        }
     }
 }
 
@@ -391,10 +399,52 @@ footer {
             }
         }
     }
+
+    main .slick-prev,
+    main .slick-prev:hover,
+    main .slick-prev:focus {
+        padding-left: 0;
+        left: 20px;
+    }
+
+    main .slick-next,
+    main .slick-next:hover,
+    main .slick-next:focus {
+        right: 10px;
+        padding-right: 0;
+    }
+
+    main .shopping-cart .container1 h1 {
+        padding-left: 10px;
+    }
+}
+
+@include media('<=890px') {
+    main .slide-block_info {
+        margin-left: 10px;
+    }
+}
+
+@include media('<=800px') {
+    main .slide-block_info {
+        .p-one {
+            font-size: 36px;
+        }
+
+        .p-two {
+            font-size: 25px;
+        }
+
+        .p-three {
+            font-size: 25px;
+        }
+    }
 }
 
 @include media('<=tablet') {
-
+    .teeth {
+        display: none;
+    }
     main .shopping-cart .container2 {
         margin-left: 20px;
         margin-right: 20px;
@@ -402,6 +452,10 @@ footer {
         h2 {
             font-size: 34.35px;
         }
+    }
+
+    main .shopping-cart .container1 h1 {
+        padding-left: 0px;
     }
 
     .iphone-main {
@@ -431,9 +485,9 @@ footer {
         display: inline-block;
     }
 
-    .teeth {
-        display: none;
-    }
+    // .teeth {
+    //     display: none;
+    // }
 
     main .slide-block_info a {
         width: 235px !important;
@@ -538,26 +592,33 @@ footer {
             padding-top: 50px;
         }
     }
-    main .item .item-content{      
-      width: 600px;
-      margin: 0 auto;
+
+    main .item .item-content {
+        width: 600px;
+        margin: 0 auto;
     }
+
     main .slide-block_info {
-      margin-top: 0;
-      margin-left: 50px;
+        margin-top: 0;
+        margin-left: 50px;
+
         p {
-          margin-left: 13px;
+            margin-left: 13px;
         }
+
         .p-one {
-          font-size: 30.98px;
+            font-size: 30.98px;
         }
+
         .p-two {
-          font-size: 22.71px;
+            font-size: 22.71px;
         }
+
         .p-three {
-          font-size: 22.71px;
+            font-size: 22.71px;
         }
-        a {           
+
+        a {
             img {
                 margin-left: 11px;
                 margin-right: 11px;
@@ -566,33 +627,38 @@ footer {
             }
         }
     }
-    
+
     main .Contrary {
-        padding-top: 0;  
-        padding-bottom: 0; 
-        br{
-          display: none;
-        }        
-        .first-text{
-          margin-top: 35px;
-          font-size: 34.14px;
-        } 
-        .second-text span{
-          font-size: 19.35px;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        br {
+            display: none;
         }
+
+        .first-text {
+            margin-top: 35px;
+            font-size: 34.14px;
+        }
+
+        .second-text span {
+            font-size: 19.35px;
+        }
+
         img {
             margin-top: 20px;
             margin-left: 10px;
             width: 120px;
             height: 140px;
         }
-        div{
-          position: relative;
-          
+
+        div {
+            position: relative;
+
         }
-        div .first-text {
-          
-        }
+
+        div .first-text {}
+
         div .second-text {
             position: absolute;
             width: 370px;
@@ -600,96 +666,256 @@ footer {
             left: 132px;
         }
     }
-    main .shopping-cart{      
-      .container1{        
-        width: 100%;
+
+    main .shopping-cart {
+        .container1 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    footer {
         display: flex;
         justify-content: center;
-      }      
-    }
-    footer{
-      display: flex;justify-content: center;
-      margin: 0;      
-      padding-top: 25px;
-      height: 84px;
-      p{
-        padding-right: 0;
-      }
+        margin: 0;
+        padding-top: 25px;
+        height: 84px;
+
+        p {
+            padding-right: 0;
+        }
     }
 }
-@include media('<=360px') {        
-    img.iphone-main{        
+
+@include media('<=590px') {
+    main .slide-block_info {
+        margin-left: 0;
+    }
+}
+
+@include media('<=540px') {
+    main .slide-block_info {
+        .p-one {
+            font-size: 22px;
+        }
+
+        .p-two {
+            font-size: 15px;
+        }
+
+        .p-three {
+            font-size: 15px;
+        }
+    }
+
+    main .slide-block_info a {
+        width: 165px !important;
+        height: 38px !important;
+        font-size: 20px !important;
+
+        img {
+            width: 24px !important;
+            height: 24px !important;
+            padding: 0;
+            margin-left: 0;
+        }
+    }
+
+    main .Contrary div .second-text {
+        position: absolute;
+        width: auto;
+        top: 75px;
+        left: 132px;
+    }
+}
+
+@include media('<=460px') {
+    main .slide-block_info {
+        margin-top: 30px;
+
+        .p-one {
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        .p-two {
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        .p-three {
+            font-size: 12px;
+            line-height: 15px;
+        }
+    }
+
+    main .slide-block_info a {
+        width: 165px !important;
+        height: 38px !important;
+        font-size: 20px !important;
+
+        img {
+            width: 24px !important;
+            height: 24px !important;
+            padding: 0;
+            margin-left: 0;
+        }
+    }
+
+    main .Contrary {
+        .first-text {
+            font-size: 25px;
+        }
+
+        p.second-text {
+            span {
+                font-size: 15px;
+            }
+
+        }
+    }
+}
+
+@include media('<=420px') {
+    main .slide-block_info {
+        margin-top: 30px;
+
+        .p-one {
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+        .p-two {
+            font-size: 10px;
+            line-height: 15px;
+        }
+
+        .p-three {
+            font-size: 10px;
+            line-height: 15px;
+        }
+    }
+
+    main .slide-block_info a {
+        width: 125px !important;
+        height: 30px !important;
+        font-size: 15px !important;
+
+        img {
+            width: 14px !important;
+            height: 14px !important;
+            padding: 0;
+            margin-left: 0;
+        }
+    }
+
+    main .Contrary {
+        .first-text {
+            font-size: 25px;
+        }
+
+        p.second-text {
+            span {
+                font-size: 15px;
+            }
+
+        }
+    }
+
+    main .item .iphone-main {
+        margin-top: 2px;
+        margin-left: 10px;
+    }
+}
+
+@include media('<=380px') {
+    main .slide-block_info {
+        margin-top: 30px;
+
+        .p-one {
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+        .p-two {
+            font-size: 10px;
+            line-height: 15px;
+        }
+
+        .p-three {
+            font-size: 10px;
+            line-height: 15px;
+        }
+    }
+
+    main .slide-block_info a {
+        width: 125px !important;
+        height: 30px !important;
+        font-size: 15px !important;
+
+        img {
+            width: 14px !important;
+            height: 14px !important;
+            padding: 0;
+            margin-left: 0;
+        }
+    }
+
+    main .Contrary {
+        .first-text {
+            font-size: 18px;
+        }
+
+        p.second-text {
+            span {
+                font-size: 12px;
+            }
+
+        }
+    }
+
+    img.iphone-main {
         width: 80px;
         height: 180px;
-      }
-    main .slide-block_info {    
-      margin-top: 30px;
-      margin-left: 10px;              
-        .p-one {
-          font-size: 20.98px;
-          line-height: 20px;
-          margin-left: 0;
-        }
-        .p-two {
-          font-size: 12.71px;
-          line-height: 20px;
-          margin-left: 0;
-        }
-        .p-three {
-          font-size: 12.71px;
-          line-height: 20px;
-          margin-left: 0;
-        }
-        a {  
-            margin-left: 0;
-            padding-top: 2px;
-            width: 165px !important;  
-            height: 30px !important;            
-            font-size: 22px !important;
-            img {
-                margin-top: 3px;
-                margin-left: 0px;
-                margin-right: 5px;
-                width: 20px !important;
-                height: 20px !important;
+    }
+
+    .main-slider {
+        .item {
+            margin-top: 30px;
+
+            .iphone-main {
+                margin-left: 20px;
             }
         }
     }
-     main .Contrary {
-        padding-top: 0;  
-        padding-bottom: 0;         
-        br{
-          display: none;
-        }
-        .first-text{
-          margin-top: 35px;
-          font-size: 22.14px;
-        } 
-        .second-text span{
-          font-size: 12.35px;
-        }
-        img {
-            margin-top: 20px;
-            margin-left: 10px;
-            width: 120px;
-            height: 140px;
-        }
-        div{
-          position: relative;
-        }
-        div .second-text {
-            position: absolute;
-            width: 180px;
-            top: 60px;
-            left: 132px;
-        }
+
+    main .shopping-cart .container2 h2 {
+        font-size: 22px;
+
     }
-  .main-slider{
-    .item{
-      margin-top: 30px;
-      .iphone-main{
-        margin-left: 5px;
-      }
+}
+
+@include media('<=360px') {
+    img.iphone-main {
+        width: 80px;
+        height: 180px;
     }
-  }
+
+    main .Contrary div .second-text {
+        top: 65px;
+    }
+
+    main .Contrary div p {
+        margin-left: 10px;
+    }
+
+    main .slide-block_info {
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+
+    main .shopping-cart .container1 h1 {
+        font-size: 32px;
+    }
 }

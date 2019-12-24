@@ -7,13 +7,21 @@ $(document).ready(function(){
     slidesToShow: 1,
     centerMode: true,
     variableWidth: true,
-    responsive: [{
+    responsive: [
+    //  {
+    //     breakpoint: 1130,
+    //     settings: {
+    //         arrows:false
+    //     }
+    // },
+    {
         breakpoint: 1024,
         settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: true,
             dots: false
+          
         }
     },
      {
