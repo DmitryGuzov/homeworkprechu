@@ -93,7 +93,7 @@
             .teeth {
                 position: absolute;
                 width: 100%;
-                background: url('../../images/bg-triangles.png') repeat-x;
+                background: url('../../images/teeth.png') repeat-x;
                 height: 8px;
                 z-index: 10;
                 bottom: 0;
@@ -351,8 +351,50 @@ footer {
     .slick-next {
         padding-right: 180px;
     }
+    main .Contrary{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    main .shopping-cart{
+        width: 100%;
+        display: flex;
+        
+    }   
+    main .slick-prev,
+    main .slick-prev:hover,
+    main .slick-prev:focus {
+        padding-left: 0;
+        left: 20px;
+    }
 
-    main .Contrary {
+    main .slick-next,
+    main .slick-next:hover,
+    main .slick-next:focus {
+        right: 10px;
+        padding-right: 0;
+    }
+
+    main .shopping-cart .container1 h1 {
+        padding-left: 10px;
+    }
+}
+@include media('<=890px') {
+    main .slide-block_info {
+        margin-left: 10px;
+    }  
+
+    .container1 {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+    }
+}
+
+@include media('<=852px'){
+     main .Contrary {
         div {
             display: block;
             width: 100%;
@@ -372,8 +414,43 @@ footer {
             }
         }
     }
+    main .Contrary {
+        padding-top: 0;
+        padding-bottom: 0;
 
-    main .Contrary,
+        br {
+            display: none;
+        }
+
+        .first-text {
+            margin-top: 35px;
+            font-size: 34.14px;
+        }
+
+        .second-text span {
+            font-size: 19.35px;
+        }
+
+        img {
+            margin-top: 20px;
+            margin-left: 10px;
+            width: 120px;
+            height: 140px;
+        }
+
+        div {
+            position: relative;
+
+        }    
+
+        div .second-text {
+            position: absolute;
+            width: 370px;
+            top: 75px;
+            left: 132px;
+        }
+    }
+    // main .Contrary,
     main .shopping-cart {
         height: auto;
         display: flex;
@@ -399,29 +476,8 @@ footer {
             }
         }
     }
-
-    main .slick-prev,
-    main .slick-prev:hover,
-    main .slick-prev:focus {
-        padding-left: 0;
-        left: 20px;
-    }
-
-    main .slick-next,
-    main .slick-next:hover,
-    main .slick-next:focus {
-        right: 10px;
-        padding-right: 0;
-    }
-
-    main .shopping-cart .container1 h1 {
-        padding-left: 10px;
-    }
-}
-
-@include media('<=890px') {
-    main .slide-block_info {
-        margin-left: 10px;
+    .container1{
+        padding-top: 20px;
     }
 }
 
@@ -439,6 +495,7 @@ footer {
             font-size: 25px;
         }
     }
+
 }
 
 @include media('<=tablet') {
@@ -483,11 +540,7 @@ footer {
 
     .iphone-mobile {
         display: inline-block;
-    }
-
-    // .teeth {
-    //     display: none;
-    // }
+    }    
 
     main .slide-block_info a {
         width: 235px !important;
@@ -500,19 +553,13 @@ footer {
             padding: 0;
         }
     }
-
-    .logo-img {
+        .logo-img {
         position: absolute;
         top: 0;
         left: 0;
     }
-
-    .container1 {
-        padding-top: 50px;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-
+    .container1 {  
+        padding-top: 50px;      
         & img {
             width: 212px;
             height: 153px;
@@ -526,20 +573,17 @@ footer {
     .slicknav_menu {
         display: block;
         background: #ffffff;
-
         & a {
             font-size: 20px;
         }
-
         & ul {
-            float: right;
-
+            float: right;      
+            width: 100%;            
             & li {
-                width: 100%;
-
+                width: 100%;                
                 & a {
                     font-size: 35px;
-                    text-align: right;
+                    text-align: center;                    
                 }
             }
         }
@@ -599,7 +643,7 @@ footer {
     }
 
     main .slide-block_info {
-        margin-top: 0;
+        margin-top: 20px;
         margin-left: 50px;
 
         p {
@@ -608,14 +652,17 @@ footer {
 
         .p-one {
             font-size: 30.98px;
+            line-height: 33px;
         }
 
         .p-two {
             font-size: 22.71px;
+            line-height: 24px;
         }
 
         .p-three {
             font-size: 22.71px;
+            line-height: 24px;
         }
 
         a {
@@ -628,44 +675,7 @@ footer {
         }
     }
 
-    main .Contrary {
-        padding-top: 0;
-        padding-bottom: 0;
 
-        br {
-            display: none;
-        }
-
-        .first-text {
-            margin-top: 35px;
-            font-size: 34.14px;
-        }
-
-        .second-text span {
-            font-size: 19.35px;
-        }
-
-        img {
-            margin-top: 20px;
-            margin-left: 10px;
-            width: 120px;
-            height: 140px;
-        }
-
-        div {
-            position: relative;
-
-        }
-
-        div .first-text {}
-
-        div .second-text {
-            position: absolute;
-            width: 370px;
-            top: 75px;
-            left: 132px;
-        }
-    }
 
     main .shopping-cart {
         .container1 {
@@ -691,22 +701,25 @@ footer {
 @include media('<=590px') {
     main .slide-block_info {
         margin-left: 0;
+         
     }
 }
 
 @include media('<=540px') {
-    main .slide-block_info {
-        .p-one {
-            font-size: 22px;
-        }
-
-        .p-two {
-            font-size: 15px;
-        }
-
-        .p-three {
-            font-size: 15px;
-        }
+     main .item .iphone-main {
+        display: none;
+    }
+    main .item-content{        
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main .item{
+        width: 550px;
+    }
+    main .slide-block_info {        
+        margin-top: 0;
     }
 
     main .slide-block_info a {
@@ -731,24 +744,6 @@ footer {
 }
 
 @include media('<=460px') {
-    main .slide-block_info {
-        margin-top: 30px;
-
-        .p-one {
-            font-size: 18px;
-            line-height: 20px;
-        }
-
-        .p-two {
-            font-size: 12px;
-            line-height: 15px;
-        }
-
-        .p-three {
-            font-size: 12px;
-            line-height: 15px;
-        }
-    }
 
     main .slide-block_info a {
         width: 165px !important;
@@ -778,24 +773,6 @@ footer {
 }
 
 @include media('<=420px') {
-    main .slide-block_info {
-        margin-top: 30px;
-
-        .p-one {
-            font-size: 15px;
-            line-height: 20px;
-        }
-
-        .p-two {
-            font-size: 10px;
-            line-height: 15px;
-        }
-
-        .p-three {
-            font-size: 10px;
-            line-height: 15px;
-        }
-    }
 
     main .slide-block_info a {
         width: 125px !important;
@@ -830,25 +807,8 @@ footer {
 }
 
 @include media('<=380px') {
-    main .slide-block_info {
-        margin-top: 30px;
 
-        .p-one {
-            font-size: 15px;
-            line-height: 20px;
-        }
-
-        .p-two {
-            font-size: 10px;
-            line-height: 15px;
-        }
-
-        .p-three {
-            font-size: 10px;
-            line-height: 15px;
-        }
-    }
-
+   
     main .slide-block_info a {
         width: 125px !important;
         height: 30px !important;
@@ -874,22 +834,6 @@ footer {
 
         }
     }
-
-    img.iphone-main {
-        width: 80px;
-        height: 180px;
-    }
-
-    .main-slider {
-        .item {
-            margin-top: 30px;
-
-            .iphone-main {
-                margin-left: 20px;
-            }
-        }
-    }
-
     main .shopping-cart .container2 h2 {
         font-size: 22px;
 
@@ -897,9 +841,26 @@ footer {
 }
 
 @include media('<=360px') {
-    img.iphone-main {
-        width: 80px;
-        height: 180px;
+        main .slide-block_info {     
+
+        .p-one {
+            font-size: 25px;
+            line-height: 27px;
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        .p-two {
+            font-size: 20px;
+            line-height: 22px;
+            margin-left: 0;
+        }
+
+        .p-three {
+            font-size: 20px;
+            line-height: 22px;
+            margin-left: 0;
+        }
     }
 
     main .Contrary div .second-text {
@@ -909,12 +870,6 @@ footer {
     main .Contrary div p {
         margin-left: 10px;
     }
-
-    main .slide-block_info {
-        margin-top: 30px;
-        margin-left: 10px;
-    }
-
     main .shopping-cart .container1 h1 {
         font-size: 32px;
     }
